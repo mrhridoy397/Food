@@ -97,10 +97,7 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $hero->createhero($_RE
                                           <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
                                             <div class="form-group">
                                                 <label for="video">Video</label>
-                                                <input type="text" id="video" class="form-control form-control-user" placeholder=" Enter video" name="video" required autofocus value="<?php if (isset($_POST['video'])) echo $_POST['video']; ?>">
-                                                <?php if (isset($Response['video']) && !empty($Response['video'])) : ?>
-                                                    <small class="text-danger"><?php echo $Response['video']; ?></small>
-                                                <?php endif; ?>
+                                                <input type="text" id="video" class="form-control form-control-user" placeholder="Video URL" name="video" autofocus value="<?php if (isset($_POST['video'])) echo $_POST['video'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">

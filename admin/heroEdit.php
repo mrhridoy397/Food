@@ -99,13 +99,11 @@ if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $hero->heroU
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
                                             <div class="form-group">
-                                                <label for="video" >Video</label>
-                                                <input type="text" id="video" class="form-control form-control-user" placeholder="Video" name="Video" required autofocus value="<?php if (isset($_POST['video'])){ echo $_POST['video'];} else { echo $data['video'];} ?>">
-                                                <?php if (isset($Response['video']) && !empty($Response['video'])) : ?>
-                                                    <small class="text-danger"><?php echo $Response['video']; ?></small>
-                                                <?php endif; ?>
+                                                <label for="video" >Video Url</label>
+                                                <input type="text" id="video" class="form-control form-control-user" placeholder="video Url" name="video" autofocus value="<?php if (isset($_POST['video'])){ echo $_POST['video'];} else { echo $data['video'];} ?>">
                                             </div>
                                         </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
                                         <div class="form-group">
                                             <label for="status">Is Active</label>
                                             <select name="status" id="status" class="form-control">
@@ -113,6 +111,7 @@ if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $hero->heroU
                                                 <option value="1" <?php if (isset($_REQUEST['status']) && $_REQUEST['status'] == 1) { echo "selected";} elseif($data['status'] == 1){echo "selected";} ?>>Active </option>
                                                 <option value="0" <?php if (isset($_REQUEST['status']) && $_REQUEST['status'] == 0) { echo "selected";} elseif($data['status'] == 0){echo "selected";} ?>>Deactive</option>
                                             </select>
+                                        </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
