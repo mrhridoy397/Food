@@ -28,7 +28,7 @@
          </a>
          <div id="batch" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
-                 <a class="collapse-item" href="BatchIndex.php">All Batch</a>
+                 <a class="collapse-item" href="heroIndex.php">All Hero</a>
                  <a class="collapse-item" href="heroCreate.php">Create Hero</a>
              </div>
          </div>
