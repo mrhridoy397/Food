@@ -1,9 +1,9 @@
-<?php require_once('./controller/heroController.php'); ?>
+<?php require_once('./controller/aboutController.php'); ?>
 <?php
-$hero = new heroController();
+$about = new aboutController();
 $Response = [];
-$active = $hero->active;
-if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $hero->createhero($_REQUEST, $_FILES);
+$active = $about->active;
+if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $about->createabout($_REQUEST, $_FILES);
 
 ?>
 <!DOCTYPE html>
@@ -44,8 +44,8 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $hero->createhero($_RE
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Create HeroAria</h1>
-                        <a href="heroIndex.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users-cog fa-sm text-white-50"></i> All HeroAria</a>
+                        <h1 class="h3 mb-0 text-gray-800">Create About</h1>
+                        <a href="aboutIndex.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users-cog fa-sm text-white-50"></i> All About</a>
                     </div>
                     <?php if (isset($Response['status']) && !$Response['status']) : ?>
                         <br>
@@ -60,43 +60,37 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $hero->createhero($_RE
                         <div class="col-md-7 offset-md-2">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Create at HeroAria</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Create at About</h6>
                                 </div>
                                 <div class="card-body">
                                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data" class="form-signin" >
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
                                             <div class="form-group">
-                                                <label for="title" >Hero Title </label>
-                                                <input type="text" id="title" class="form-control form-control-user" placeholder="Enter Title " name="title" required autofocus value="<?php if (isset($_POST['title'])) echo $_POST['title']; ?>">
-                                                <?php if (isset($Response['title']) && !empty($Response['title'])) : ?>
-                                                    <small class="text-danger"><?php echo $Response['title']; ?></small>
-                                                <?php endif; ?>
+                                                <label for="title">Title</label>
+                                                <input type="text" id="title" class="form-control form-control-user" placeholder="Title" name="title" required autofocus value="<?php if (isset($_POST['title'])) echo $_POST['title'] ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
+                                        <div class="form-group">
+                                        <label for="about"> About</label>
+                                          <textarea class="form-control" name="about" id="about" Rows="10" class="form-control"><?php if (isset($_POST['about'])) echo $_POST['about'] ?></textarea>
+                                        </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
+                                            <div class="form-group">
+                                                <label for="phone_title">Phone Title</label>
+                                                <input type="text" id="phone_title" class="form-control form-control-user" placeholder="Phone Title" name="phone_title" required autofocus value="<?php if (isset($_POST['phone_title'])) echo $_POST['phone_title'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
                                             <div class="form-group">
-                                                <label for="shortDescription" >Short Description</label>
-                                                <input type="text" id="shortDescription" class="form-control form-control-user" placeholder=" Enter shortDescription " name="shortDescription" required autofocus value="<?php if (isset($_POST['shortDescription'])) echo $_POST['shortDescription']; ?>">
-                                                <?php if (isset($Response['shortDescription']) && !empty($Response['shortDescription'])) : ?>
-                                                    <small class="text-danger"><?php echo $Response['shortDescription']; ?></small>
-                                                <?php endif; ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
-                                            <div class="form-group">
-                                                <label for="btnOne">Button One text</label>
-                                                <input type="text" id="btnOne" class="form-control form-control-user" placeholder="Button One text" name="btnOne" required autofocus value="<?php if (isset($_POST['btnOne'])) echo $_POST['btnOne'] ?>">
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
-                                            <div class="form-group">
-                                                <label for="btnOneLink">Button One URL</label>
-                                                <input type="text" id="btnOneLink" class="form-control form-control-user" placeholder="Button One URL" name="btnOneLink" autofocus value="<?php if (isset($_POST['btnOneLink'])) echo $_POST['btnOneLink'] ?>">
+                                                <label for="phone">Button One URL</label>
+                                                <input type="text" id="phone" class="form-control form-control-user" placeholder="Phone" name="phone" autofocus value="<?php if (isset($_POST['phone'])) echo $_POST['phone'] ?>">
                                             </div>
                                         </div>
                                           <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
                                             <div class="form-group">
-                                                <label for="video">Video</label>
+                                                <label for="video">Video URL</label>
                                                 <input type="text" id="video" class="form-control form-control-user" placeholder="Video URL" name="video" autofocus value="<?php if (isset($_POST['video'])) echo $_POST['video'] ?>">
                                             </div>
                                         </div>
@@ -118,7 +112,7 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $hero->createhero($_RE
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 text-center">
                                             <button class="btn btn-md btn-primary btn-primary" type="submit">Save</button>
-                                            <a href="heroIndex.php" class="btn btn-md btn-primary btn-danger">Cencle</a>
+                                            <a href="aboutIndex.php" class="btn btn-md btn-primary btn-danger">Cencle</a>
                                         </div>
                                     </form>
                                 </div>
@@ -170,6 +164,11 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $hero->createhero($_RE
     <?php
     include_once('./partials/script.php');
     ?>
+
+<script src="./assets/vendor/ckeditor_4.22.1_full/ckeditor/ckeditor.js"></script>
+    <script>  
+        CKEDITOR.replace( 'about' );
+     </script>
 
 </body>
 

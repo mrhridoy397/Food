@@ -26,5 +26,11 @@ class CMSController extends Controller
         }
     
 
+         // About
+         public function getabout()
+         {
+             return $this->Model->indexAbout();
+         }
+
 
 }

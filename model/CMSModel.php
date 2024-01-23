@@ -20,4 +20,20 @@ class CMSModel extends Db
         return array();
     }
 
+    // About 
+    public function indexAbout()
+    {
+        $this->query("SELECT * FROM `about` where `status` = 1");
+        $this->execute();
+
+        $about = $this->fetchAll();
+        if (!empty($about)) {
+            $Response = array(
+                $about
+            );
+            return $Response;
+        }
+        return array();
+    }
+
 }

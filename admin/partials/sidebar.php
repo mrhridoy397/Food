@@ -34,6 +34,22 @@
          </div>
      </li>
 
+          <!-- Divider -->
+          <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#About" aria-expanded="true" aria-controls="collapsePages">
+         <i class="fas fa-address-card"></i>
+             <span>About</span>
+         </a>
+         <div id="About" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="aboutIndex.php">All About</a>
+                 <a class="collapse-item" href="aboutCreate.php">Create About</a>
+             </div>
+         </div>
+     </li>
+
      <!-- Divider -->
      <hr class="sidebar-divider d-none d-md-block">
      <li class="nav-item active">
