@@ -36,4 +36,21 @@ class CMSModel extends Db
         return array();
     }
 
+
+    // Why Us 
+    public function indexwhy()
+    {
+        $this->query("SELECT * FROM `whay` where `status` = 1");
+        $this->execute();
+
+        $why = $this->fetchAll();
+        if (!empty($why)) {
+            $Response = array(
+                $why
+            );
+            return $Response;
+        }
+        return array();
+    }
+
 }

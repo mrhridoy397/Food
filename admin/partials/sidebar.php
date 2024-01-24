@@ -50,6 +50,22 @@
          </div>
      </li>
 
+               <!-- Divider -->
+               <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#wwhy" aria-expanded="true" aria-controls="collapsePages">
+         <i class="fas fa-user"></i>
+             <span>Why Us</span>
+         </a>
+         <div id="wwhy" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="whyIndex.php">All Why</a>
+                 <a class="collapse-item" href="whyCreate.php">Create Why</a>
+             </div>
+         </div>
+     </li>
+
      <!-- Divider -->
      <hr class="sidebar-divider d-none d-md-block">
      <li class="nav-item active">

@@ -6,6 +6,7 @@ $Response = [];
 $active = $hero->active;
 $index = $hero->gethero();
 $about = $hero->getabout();
+$why = $hero->getwhy();
 // var_dump($index);
 ?>
 <?php
@@ -85,15 +86,18 @@ require_once('./partials/header.php')
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us section-bg">
       <div class="container" data-aos="fade-up">
-
+              <?php 
+                foreach ($why as $value) {
+                  
+               
+              ?>
         <div class="row gy-4">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="why-box">
-              <h3>Why Choose Yummy?</h3>
+              <h3><?php echo $value[0]['title']; ?></h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+              <?php echo $value[0]['about']; ?>
               </p>
               <div class="text-center">
                 <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -107,24 +111,24 @@ require_once('./partials/header.php')
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                   <i class="bi bi-clipboard-data"></i>
-                  <h4>Corporis voluptates officia eiusmod</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  <h4><?php echo $value[1]['title']; ?></h4>
+                  <p><?php echo $value[1]['about']; ?></p>
                 </div>
               </div><!-- End Icon Box -->
 
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                   <i class="bi bi-gem"></i>
-                  <h4>Ullamco laboris ladore pan</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  <h4><?php echo $value[2]['title']; ?></h4>
+                  <p><?php echo $value[2]['about']; ?></p>
                 </div>
               </div><!-- End Icon Box -->
 
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                   <i class="bi bi-inboxes"></i>
-                  <h4>Labore consequatur incidid dolore</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  <h4><?php echo $value[3]['title']; ?></h4>
+                  <p><?php echo $value[3]['about']; ?></p>
                 </div>
               </div><!-- End Icon Box -->
 
@@ -132,6 +136,7 @@ require_once('./partials/header.php')
           </div>
 
         </div>
+        <?php  }?>
 
       </div>
     </section><!-- End Why Us Section -->

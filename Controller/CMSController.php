@@ -32,5 +32,11 @@ class CMSController extends Controller
              return $this->Model->indexAbout();
          }
 
+          // Why Us
+          public function getwhy()
+          {
+              return $this->Model->indexwhy();
+          }
+ 
 
 }
