@@ -37,6 +37,19 @@ class CMSController extends Controller
           {
               return $this->Model->indexwhy();
           }
+
+
+           // counter section
+           public function getcounter()
+           {
+               return $this->Model->indexcounter();
+           }
+
+             // Stuff section
+             public function getstuff()
+             {
+                 return $this->Model->indexstuff();
+             }
  
 
 }

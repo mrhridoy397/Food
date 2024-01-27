@@ -22,11 +22,11 @@
      <hr class="sidebar-divider my-0">
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#batch" aria-expanded="true" aria-controls="collapsePages">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Aria" aria-expanded="true" aria-controls="collapsePages">
              <i class="fas fa-users-cog fa-sm text-white-50"></i>
              <span>HeroAria</span>
          </a>
-         <div id="batch" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+         <div id="Aria" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  <a class="collapse-item" href="heroIndex.php">All Hero</a>
                  <a class="collapse-item" href="heroCreate.php">Create Hero</a>
@@ -78,6 +78,54 @@
              <div class="bg-white py-2 collapse-inner rounded">
                  <a class="collapse-item" href="counterIndex.php">All Counter</a>
                  <a class="collapse-item" href="counterCreate.php">Create Counter</a>
+             </div>
+         </div>
+     </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#products" aria-expanded="true" aria-controls="collapsePages">
+         <i class="fab fa-product-hunt"></i>
+             <span>Product</span>
+         </a>
+         <div id="products" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="productcatagorisIndex.php">Product Catagoris</a>
+             </div>
+         </div>
+     </li>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#CHEF" aria-expanded="true" aria-controls="collapsePages">
+         <i class="fas fa-random"></i>
+             <span>CHEFS</span>
+         </a>
+         <div id="CHEF" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="StuffIndex.php"> All PCHEFS</a>
+                 <a class="collapse-item" href="StuffCreate.php"> Create PCHEFS</a>
+             </div>
+         </div>
+     </li>
+
+       <!-- Divider -->
+       <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#batch" aria-expanded="true" aria-controls="collapsePages">
+         <i class="fas fa-stopwatch-20"></i>
+             <span>Batchs</span>
+         </a>
+         <div id="batch" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="BatchIndex.php"> All Batchs</a>
+                 <a class="collapse-item" href="BatchCreate.php"> Create Batchs</a>
              </div>
          </div>
      </li>

@@ -53,4 +53,37 @@ class CMSModel extends Db
         return array();
     }
 
+       // Counter section 
+       public function indexcounter()
+       {
+           $this->query("SELECT * FROM `counter` where `status` = 1");
+           $this->execute();
+   
+           $counter = $this->fetchAll();
+           if (!empty($counter)) {
+               $Response = array(
+                   $counter
+               );
+               return $Response;
+           }
+           return array();
+       }
+
+         // Stuff section 
+         public function indexstuff()
+         {
+             $this->query("SELECT * FROM `stuff` where `status` = 1");
+             $this->execute();
+     
+             $stuff = $this->fetchAll();
+             if (!empty($stuff)) {
+                 $Response = array(
+                     $stuff
+                 );
+                 return $Response;
+             }
+             return array();
+         }
+  
+
 }
